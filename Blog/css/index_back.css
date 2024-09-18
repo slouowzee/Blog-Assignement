@@ -1,0 +1,15 @@
+/* Style gif de fond pour la page index*/
+.container{
+	position: relative;
+	background-image: url('../image/cherry.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 50px;
+	min-height: 100vh;
+	box-sizing: border-box;
+	overflow: hidden; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

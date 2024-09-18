@@ -1,0 +1,159 @@
+html, body{
+	margin: 0;
+}
+
+a{
+	color: #000;
+}
+
+/* Style du header */
+.header{
+	background-color: #fff;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+/* Style de la liste du header */
+.header ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+/* Style des liens de la liste */
+.header li a{
+	font-family: 'Silkscreen', sans-serif;
+	display: block;
+	padding: 20px 20px;
+	border-right: 1px solid #f4f4f4;
+	text-decoration: none;
+	user-select: none;
+}
+
+/* Style pour le survol des liens */
+.header li a:hover,
+.header .menu-btn:hover{
+	background-color: #f4f4f4;
+}
+
+/* Style pour le logo du header */
+.header .logo{
+	font-family: 'Silkscreen', sans-serif;
+	font-weight: 1000;
+	display: block;
+	float: left;
+	font-size: 1.8em;
+	padding: 10px 20px;
+	text-decoration: none;
+	user-select: none;
+}
+
+/* Style pour le menu */
+.header .menu{
+	clear: both;
+	max-height: 0;
+	transition: max-height .5s ease-out;
+}
+
+/* Positionnement de l'icône du menu */
+.header .menu-icon{
+	cursor: pointer;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+}
+
+/* Style pour l'icône du menu */
+.header .menu-icon .navicon{
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 20px;
+}
+
+/* Style pour les barres de l'icône du menu avant / après */
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after{
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+
+/* Positionnement des barres de l'icône */
+.header .menu-icon .navicon:before{
+	top: 5px;
+}
+.header .menu-icon .navicon:after{
+	top: -5px;
+}
+
+/* Style pour la checkbox */
+.header .menu-btn{
+	display: none;
+}
+
+/* Hauteur du menu lorsque la checkbox est cochée */
+.header .menu-btn:checked ~ .menu{
+	max-height: 240px;
+}
+
+/* Style pour cacher les barres lorsque la checkbox est cochée */
+.header .menu-btn:checked ~ .menu-icon .navicon{
+	background: transparent;
+}
+
+/* Création de la croix lorsque la checkbox est cochée */
+.header .menu-btn:checked ~ .menu-icon .navicon:before{
+	transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after{
+   	transform: rotate(45deg);
+}
+
+/* Correction de la croix */
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
+  	top: 0;
+}
+
+/* Style pour les écrans supérieurs à 768px */
+@media (min-width: 48em){
+	.header li{
+		float: left;
+	}
+	.header li a{
+		padding: 20px 30px;
+	}
+	.header .menu{
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.header .menu-icon{
+		display: none;
+	}
+}
+
+.container .text-ctn{
+	font-family: 'Silkscreen', sans-serif;
+	color: black;
+	text-align: center;
+	user-select: none;
+}
+.container .text-ctn h1{
+	font-size: 3em;
+
+}
