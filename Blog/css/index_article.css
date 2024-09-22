@@ -1,0 +1,54 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100vh; /* Prend la hauteur totale de la fenêtre */
+}
+
+.autoformation, .norme {
+	position: relative;
+	flex: 1; /* Chaque bouton prend 50% de l'espace */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	overflow: hidden; /* Masque tout dépassement */
+}
+
+.autoformation img, .norme img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: blur(6px); /* Flou léger */
+	transition: filter 0.3s ease; /* Transition douce */
+}
+
+.autoformation:hover img, .norme:hover img {
+	filter: none; /* Enlève le flou au survol */
+}
+
+.text {
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	opacity: 0;
+	transition: opacity 0.3s ease; /* Apparition douce du texte */
+}
+
+.autoformation:hover .text, .norme:hover .text {
+	opacity: 1; /* Le texte devient visible au survol */
+}
+
+.autoformation {
+	margin-right: 1vw; /* Espacement entre les deux boutons */
+}
+
+.norme {
+	margin-left: 1vw;
+}
