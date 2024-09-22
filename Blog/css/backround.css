@@ -1,7 +1,7 @@
 /* Backround de l'index */
 .container{
 	position: relative;
-	background-image: url('../image/cherry.gif');
+	background-color: #fff;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
