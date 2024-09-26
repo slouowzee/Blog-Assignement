@@ -1,54 +1,86 @@
-.container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 100vh; /* Prend la hauteur totale de la fenêtre */
+.container{
+	padding-top: 8.5%;
+	background-image: url(../image/livre.jpg);
 }
 
-.autoformation, .norme {
-	position: relative;
-	flex: 1; /* Chaque bouton prend 50% de l'espace */
-	display: flex;
-	align-items: center;
-	justify-content: center;
+article{
 	background-color: #fff;
-	border: none;
-	padding: 10px;
+	border-radius: 2vh;
+	margin: 2vw;	
+	width: 45vw;
+	height: 50vh;
+	font-family: "Josefin Sans";
+	position: relative;
+}
+
+h1{
+	text-align: center;
+	font-size: 4vh;
+	padding: 1vw;
+}
+
+h2{
+	text-align: center;
+	font-size: 3vh;
+}
+
+p{
+	font-size: 3vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	line-height: 1.3;
+}
+
+button {
+	border: 2px solid #bbbbbb;
+	background-color: transparent;
+	color: #000;
+	padding: 5px 10px;
+	font-size: 2vh;
 	cursor: pointer;
-	border-radius: 5px;
-	overflow: hidden; /* Masque tout dépassement */
+	border-radius: 20px;
+	position: relative;
 }
 
-.autoformation img, .norme img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	filter: blur(6px); /* Flou léger */
-	transition: filter 0.3s ease; /* Transition douce */
-}
-
-.autoformation:hover img, .norme:hover img {
-	filter: none; /* Enlève le flou au survol */
-}
-
-.text {
+.auto-btn, .norme-btn {
 	position: absolute;
-	color: white;
-	font-size: 2em;
-	font-weight: bold;
-	opacity: 0;
-	transition: opacity 0.3s ease; /* Apparition douce du texte */
+	bottom: 15px;
+	right: 15px;
 }
 
-.autoformation:hover .text, .norme:hover .text {
-	opacity: 1; /* Le texte devient visible au survol */
+button:hover {
+	background-color: #f4f4f4;
+	color: #000;
 }
 
-.autoformation {
-	margin-right: 1vw; /* Espacement entre les deux boutons */
+a{
+	font-family: "Josefin Sans";
+	text-decoration: none;
 }
 
-.norme {
-	margin-left: 1vw;
+@media (max-width: 1023px){
+	.container{
+		padding-top: 10vh;
+		padding-bottom: 1vh;
+		display: grid;
+	}
+	.container article{
+		height: 40vh;
+		width: 80vw;
+		margin: 1vh;
+	}
+	h1{
+		font-size: 3vh;
+	}
+	h2{
+		font-size: 2vh;
+	}
+	p{
+		font-size: 2.5vh;
+		line-height: 1;
+	}
+	.auto-btn, .norme-btn {
+		bottom: 10px;
+		right: 10px;
+	}
 }
