@@ -1,0 +1,21 @@
+/* Assure-toi que le body prend toute la hauteur de la page */
+html, body {
+	height: 100%;
+	margin: 0;
+    }
+    
+    /* Utilise le GIF comme image de fond pour le body */
+    body {
+	background-image: url('giphy.gif'); /* Remplace par le chemin de ton GIF */
+	background-size: cover;  /* Ajuste la taille de l'image pour couvrir tout l'écran */
+	background-position: center;  /* Centre l'image de fond */
+	background-repeat: no-repeat;  /* Évite la répétition de l'image */
+    }
+    
+    /* Styliser la div container pour la mettre en évidence */
+    .container {
+	color: white;  /* Assure-toi que le texte est lisible */
+	text-align: center;
+	padding: 50px;
+    }
+    	

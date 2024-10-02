@@ -40,6 +40,7 @@ button {
 	cursor: pointer;
 	border-radius: 20px;
 	position: relative;
+	user-select: none;
 }
 
 .auto-btn, .norme-btn {
@@ -53,7 +54,7 @@ button:hover {
 	color: #000;
 }
 
-a{
+.container a{
 	font-family: "Josefin Sans";
 	text-decoration: none;
 }
