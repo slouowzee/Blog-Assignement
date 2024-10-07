@@ -1,0 +1,73 @@
+.container {
+	padding-top: 110px;
+	background-image: url(../image/auto4.jpg);
+	position: relative;
+}
+
+.auto {
+	background-color: #fff;
+	border-radius: 50px;
+	box-shadow: 2px 5px #e4e2e2;
+	padding: 4vw;
+	font-family: "Josefin Sans";
+	width: 70dvw;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 25px;
+}
+
+li {
+	font-size: 1.2em;
+	line-height: 25px;
+}
+
+.titre {
+	padding-bottom: 20px;
+}
+.titre h1 {
+	font-size: 2em;
+	text-align: center;
+	background-color: #d9e0e6;
+	border-radius: 15px;
+	box-shadow: 8px 5px #e4e2e2;
+	padding: 15px;
+}
+
+
+.bloc1 {
+	padding-bottom: 30px;
+}
+.bloc1 h2{
+	font-size: 1.5em;
+	text-align: center;
+	background-color: #d9e0e6;
+	border-radius: 15px;
+	box-shadow: 8px 5px #e4e2e2;
+	padding: 12px;
+}
+
+.bloc2 {
+	font-size: 1em;
+	text-align: center;
+	background-color: #e0e0e0;
+	border-radius: 15px;
+	box-shadow: 8px 5px #e4e2e2;
+	padding: 1px;
+}
+
+.bloc3 {
+	padding-top: 30px;
+}
+.bloc3 li {
+	padding: 5px;
+}
+
+.bloc4 li {
+	padding: 5px;
+}
+
+.sep {
+	text-align: center;
+}
