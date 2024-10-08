@@ -160,6 +160,12 @@ a{
 	opacity: 1;
 }
 
+.footer p {
+	text-align: center;
+	font-size: 0.6em;
+	padding-bottom: 20px;
+	opacity: 0.8;
+}
 /* Style pour les écrans supérieurs à 768px */
 @media (min-width: 1024px){
 	.header ul{

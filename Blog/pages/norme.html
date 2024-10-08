@@ -4,12 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Le Monde de SLou</title>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
 		<link rel="stylesheet" href="../css/header_footer.css">
 		<link rel="stylesheet" href="../css/backround.css">
+		<link rel="stylesheet" href="../css/norme.css">
 	</head>
+
 	<body>
 		<header class="header">
 			<a href="index.html" class="logo">S</a>
@@ -22,9 +29,104 @@
 				<li><a href="../pages/contact.html">Contact</a></li>
 			</ul>
 		</header>
+
 		<section class="container">
-			
+			<article class="norme">
+				<div class="titre">
+					<h1>Bien coder ? <br> Oui, mais comment ?</h1>
+					<p>Devenir un bon développeur fait partie du BABA du métier de développeur (oui vraiment...). Mais qu'en est-il de ce qu'il faut appliquer afin de l'être ? Je vous parlerai donc dans cet article de la norme et de la connaissance puisque ce sont les seules (ou presque) étapes afin d'être un bon développeur pour vous même mais aussi pour les autres. </p>
+				</div>
+				<div class="bloc1">
+					<p class="sep">---</p>
+					<p>Voyons en premier temps la norme de code. Tout développeur doit respecter une norme de formatage dans son code afin qu'il soit lisible, que ce soit par les autres mais aussi pour vous même. Pour le bien de nos yeux, suivez la norme.</p>
+					<p>Je peux vous redirigez à l'adresse suivante de la norme de l'école 42, bien que très strict, elle permet de mieux se relire et d'avoir un code beau visuellement et structurellement : <a href="https://github.com/slouowzee/C-Piscine-42/blob/main/norme.fr.pdf">Norme 42</a>.</p>
+				</div>
+				<div class="bloc2">
+					<p class="sep">---</p>
+					<p>Voici un code en C, réalise à la norme 42 :</p>
+					<pre><code>
+int	ft_atoi(char *str)
+{
+	int	sum;
+	int	sign;
+
+	sum = 0;
+	sign = 1;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = sign * -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		sum = sum * 10 + (*str - '0');
+		str++;
+	}
+	return (sign * sum);
+}
+					</code></pre>
+					<p>Et voici ce même code en C, avec une norme autre que celle de 42, mais tout de même lisible :</p>
+					<pre><code>
+int atoi(char *str) {
+	int sum = 0;
+	int sign = 1;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	while (*str == '-' || *str == '+') {
+		if (*str == '-')
+			sign = sign * -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9') {
+		sum = sum * 10 + (*str - '0');
+		str++;
+	}
+	return sign * sum;
+}
+					</code></pre>
+					<p>Et une version illisible et incompréhensible du même programme :</p>
+					<pre><code>
+int ai(char *s) {
+	int a = 0; int b = 1;
+	while (*s == ' ' || (*s >= 9 && *s <= 13)) s++;
+	while (*s == '-' || *s == '+') {
+		if (*s == '-') b = b * -1;
+		s++;}
+	while (*s >= '0' && *s <= '9'){
+		a = a * 10 + (*s - '0');
+		s++;}
+	return b * a;
+}
+					</code></pre>
+					<p>A noter que tous ces codes fonctionnent, si vous voulez les tester en les compilant libre à vous.</p>
+				</div>
+				<div class="bloc3">
+					<p class="sep">---</p>
+					<p>Si vous avez remarqué, la fonction que vous avez pu observer ci-dessus, se nomme "atoi", c'est une fonction C qui permet de convertir une chaine de caractère en Integer (avec certaines règles), son équivalent en C# est Convert.ToInt32().</p>
+					<p>Afin d'être qualifié bon développeur, des connaissances approfondies sur les langages de programmation que vous pratiquez est nécessaire, connaitre tout une panoplie de langage ne sert pas à grand-chose si votre niveau n'est pas avancé, si vous en connaissez parfaitement quelques-uns, vous irez surement plus loin.</p>
+				</div>
+				<div class="bloc4">
+					<p class="sep">---</p>
+					<p>Cette partie sur la connaissance étant bien courte, passons aux qualités à avoir en tant que développeur :</p>
+					<ul>
+						<li>La curiosité, c'est une qualité indispensable dans notre monde actuel ainsi que dans la vie professionnelle, cette curiosité est aussi une des qualités à avoir afin de réussir une autoformation.</li>
+						<li>Un désir de savoir et d'évoluer : toujours lié à la curiosité et à l'autoformation, il faut le vouloir pour pouvoir.</li>
+						<li>Une communication fluide et une bonne sociabilité : plus vous êtes à l'aise avec les autres, mieux ce sera.</li>
+						<li>Savoir travailler en équipe : cela va avec la communication et la sociabilité, ce sont des qualités paires pour bien travailler avec les autres.</li>
+						<li>Comprendre ce que l'on fait, bien que ça paraisse normal, on garde les "développeurs" qui utilise des IA pour remplacer leur savoir dans un coin de notre tête. Je parle de ceux qui n'apprennent pas mais qui laisse à une machine faire son boulot.</li>
+						<li>Bien connaitre son environnement de travail, forcément.</li>
+					</ul>
+				</div>
+				<div class="conclu">
+					<p class="sep">---</p>
+					<p>Pour résumer, le métier de développeur ne consiste pas seulement à écrire quelques lignes de codes et utiliser une IA, il fait avoir de la connaissance, savoir ce que l'on fait pour progresser que ce soit dans votre vie professionnelle ou bien personnelle. Quand vous travaillez en équipe ou même seul, les normes doivent obligatoirement être respectées, elles vous serviront à pouvoir vous relire sans problème de même que pour votre équipe.</p>
+				</div>
+			</article>
 		</section>
+
 		<footer class="footer">
 			<ul class="links">
 				<li><a href="index.html">Accueil</a></li>
@@ -33,6 +135,7 @@
 				<li><a href="../pages/contact.html">Contact</a></li>
 				<li><a href="../pages/sources.html">Sources</a></li>
 			</ul>
+			<p>Le Monde de Slou - © 2024 - Tous droits réservés</p>
 		</footer>
 	</body>
 </html>
